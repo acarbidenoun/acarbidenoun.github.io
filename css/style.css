@@ -7,11 +7,11 @@ acarbidenoun page
 html {
 	max-width:100%;
 	min-width:100%;
-	background: #bfbfbf;
+	background: #efefef;
 	font: sans-serif;
 }
 
 #paper {
-	padding: 30px;
-	background: #ececec;
+	padding: 60px;
+	background: #fcfcfb;
 }
