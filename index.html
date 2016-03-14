@@ -6,16 +6,40 @@
 
 	<title>acarbidenoun is still working on this</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+	$(function() {
+		var availableTags = [
+			"tungkol sa akin",
+			"about",
+			"mga nagawa",
+			"works",
+			"portfolio",
+			"links",
+			"cv"
+		];
+		$("#keywords").autocomplete({source:
+			availableTags});
+	});
+	</script>
 </head>
 
 <body>
 	<div id="paper" class="container">
 		<div class="panel" id="main">
-			<h1>Ano ang gusto mo makita?</h1>
-			<input type="search" name=s />
+			<div class="logo"></div>
+			<h1>Ano ang gusto mong makita?</h1>
+			<input id="keywords" type="search" name=s placeholder="tungkol sa akin, mga nagawa, cv"/>
 		</div>
 
+	<div class="result widget">
+		<em>Close</em>
+		<h2>Tungkol sa akin</h2>
+		<p>Ako si Ariane Bundoc. Nagtatrabaho bilang isang UI/UX Designer sa Screen Interaction na may mga opisina sa Stockholm at Dubai. Nagsimula noong 2010 bilang Freelance Web Designer at Front-end Developer. Nag-aral ng New Media Design at nagmulang Pilipinas. 
+		<p>
 	</div>
 
 </body>
+
 </html>
