@@ -5,9 +5,9 @@ acarbidenoun page
 */
 
 .logo {
-	width:160px;height:160px;margin:0 auto;
+	width:160px;height:160px;/*margin:0 auto;*/
 	background-image:url('../images/abblack.png');
-	zoom:0.5;
+	zoom:0.25;
 }
 
 @font-face {
@@ -47,10 +47,14 @@ acarbidenoun page
     font-style: normal;
 }
 
+.hero {
+	font-size: 36px;
+}
+
 html {
 	max-width:100%;
 	min-width:100%;
-	background: #2c2c2c;
+	background: #212121;
 }
 
 body {
@@ -60,27 +64,47 @@ body {
 	color:#fff;
 }
 
+.result {
+	display:none;
+}
+
+.result.show {
+	display:block;
+}
+
 #paper {
 	margin: 60px;
 	padding: 60px;
-	background: #222222;
+	background: transparent;
 }
 
 #main.panel {
-	text-align: center;
+	text-align:center;
 	padding: 60px;
-	border: 1px solid #3c3c3c;
+	border: 0px solid #3c3c3c;
+	background:transparent;
 }
 
-.panel input[type="search"] {
-	font-size:15px;
+select {
+	background:#2d2d2d;
 	color:#f3f3f3;
-	background: transparent;
-	border:0px;
 	height:45px;
-	padding: 10px 5px;
-	padding-right:10px;
-	width: 450px;
-	border-radius: 0px;
-	border:0.5px solid #eaeaea;
+	width:450px;
+	font-size:21px;
+	font-family:'source_sans_proextralight';
+	border-radius:0;
+	border:1px solid #4c4c4c;
+}
+
+.widget {
+	width:75%;
+	font-size:1.15em;
+	line-height:2em;
+	margin:0 auto;
+}
+
+.widget h2 {
+	font-family:'sourcesanspro-semibold';
+	font-size:13px;
+	text-transform:uppercase;
 }

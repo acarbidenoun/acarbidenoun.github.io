@@ -12,23 +12,56 @@
 
 <body>
 	<div id="paper" class="container">
+		<div class="logo"></div>
 		<div class="panel" id="main">
-			<div class="logo"></div>
-			<h1>Ano ang gusto mong makita?</h1>
-			<select name="links">
-				<option value="about">Tungkol sa akin</option>
-				<option value="portfolio">Mga nagawa</option>
-				<option value="resume">Buod</option>
-				<option value="atbp">Sa Ibang Lugar</option>
+			<h1 class="hero">What would you like to see?</h1>
+			<select name="sects" id="sects">
+				<option value="about">About Me</option>
+				<option value="portfolio">Portfolio</option>
+				<option value="resume">Resume</option>
+				<option value="links">Links</option>
 			</select>
 		</div>
+	<div class="check"></div>
 
-	<div class="result widget">
+	<div id="about" class="result widget">
 		<em>Close</em>
-		<h2>Tungkol sa akin</h2>
-		<p>Ako si Ariane Bundoc. Nagtatrabaho bilang isang UI/UX Designer sa Screen Interaction na may mga opisina sa Stockholm at Dubai. Nagsimula noong 2010 bilang Freelance Web Designer at Front-end Developer. Nag-aral ng New Media Design at nagmulang Pilipinas. 
-		<p>
+		<h2>About Me</h2>
+		<h2 class="sub">Tungkol sa akin</h2>
+		<p>I'm Ariane Bundoc, a UI/UX Designer at Screen Interaction with offices in Stockholm and Dubai. I started as a Freelance Web Designer/Front-end Developer in 2010. My background is in New Media Design.</p>
+		<p class="sub">Ako si Ariane Bundoc. Nagtatrabaho bilang isang UI/UX Designer sa Screen Interaction na may mga opisina sa Stockholm at Dubai. Nagsimula noong 2010 bilang Freelance Web Designer at Front-end Developer. Nag-aral ng New Media Design at nagmulang Pilipinas. 
+		</p>
 	</div>
+
+	<div id="portfolio" class="result widget">
+		<em>Close</em>
+		<h2>Portfolio</h2>
+		<h2 class="sub">Mga Gawa</h2>
+		<p></p>
+		<p class="sub">
+		</p>
+	</div>
+
+	<script>
+	$( "select" )
+	  .change(function() {
+	    var val = $("select option").val();
+		if ( val == "about") {
+			$("div#about").toggleClass("show"); $("div#portfolio").removeClass("show"); $("div#resume").removeClass("show"); $("div#links").removeClass("show");
+		} else if ( val == "portfolio") {
+			$("div#portfolio").addClass("show"); $("div#about").removeClass("show"); $("div#resume").removeClass("show"); $("div#links").removeClass("show");
+		} else if ( val == "resume") {
+			$("div#resume").addClass("show"); $("div#about").removeClass("show"); $("div#portfolio").removeClass("show"); $("div#links").removeClass("show");
+		} else if ( val == "links") {
+			$("div#links").addClass("show"); $("div#about").removeClass("show"); $("div#resume").removeClass("show"); $("div#portfolio").removeClass("show");
+		} 
+		else {
+			
+		};
+
+	  })
+	  .trigger( "change" );
+	</script>
 
 </body>
 
