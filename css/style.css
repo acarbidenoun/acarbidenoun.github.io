@@ -48,7 +48,7 @@ acarbidenoun page
 }
 
 .hero {
-	font-size: 36px;
+	font-size: 33px;
 }
 
 html {
@@ -58,10 +58,15 @@ html {
 }
 
 body {
+	max-width:100%;
 	line-height:1.75em;
 	font-family:'source_sans_proextralight';
 	font-size: 14px;
 	color:#fff;
+}
+
+h1 {
+	text-transform:uppercase;
 }
 
 h2.sub {
@@ -87,8 +92,8 @@ p.sub {
 }
 
 #paper {
-	margin: 60px;
-	padding: 60px;
+	width:75%;
+	margin:130px auto;
 	background: transparent;
 }
 
@@ -121,4 +126,33 @@ select {
 	font-family:'sourcesanspro-semibold';
 	font-size:13px;
 	text-transform:uppercase;
+}
+
+footer {
+	width:inherit;
+	border-top:1px dotted #4c4c4c;
+	position:fixed;
+	bottom:0px;
+	margin-bottom:0;
+	background:#212121;
+}
+
+footer .dashlet {
+	max-width:33%;
+	padding:10px;
+	float:left;
+	text-transform:uppercase;
+	color:#6d6d6c;
+}
+
+.dashlet em {
+	font-family:'sourcesanspro-semibold';
+	font-style:normal;
+	font-size:27px;
+	color:#ececec;
+}
+
+footer .dashlet:nth-child(2){
+	border-left:1px dotted #4c4c4c;
+	border-right:1px dotted #4c4c4c;
 }
