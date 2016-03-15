@@ -25,11 +25,11 @@
 	<div class="check"></div>
 
 	<div id="about" class="result widget">
-		<em>Close</em>
 		<h2>About Me</h2>
-		<h2 class="sub">Tungkol sa akin</h2>
+		
 		<p>I'm Ariane Bundoc, a UI/UX Designer at Screen Interaction with offices in Stockholm and Dubai. I started as a Freelance Web Designer/Front-end Developer in 2010. My background is in New Media Design.</p>
-		<p class="sub">Ako si Ariane Bundoc. Nagtatrabaho bilang isang UI/UX Designer sa Screen Interaction na may mga opisina sa Stockholm at Dubai. Nagsimula noong 2010 bilang Freelance Web Designer at Front-end Developer. Nag-aral ng New Media Design at nagmulang Pilipinas. 
+
+		<h2 class="sub">Tungkol sa akin</h2><p class="sub">Ako si Ariane Bundoc. Nagtatrabaho bilang isang UI/UX Designer sa Screen Interaction na may mga opisina sa Stockholm at Dubai. Nagsimula noong 2010 bilang Freelance Web Designer at Front-end Developer. Nag-aral ng New Media Design at nagmulang Pilipinas. 
 		</p>
 	</div>
 
@@ -40,6 +40,25 @@
 		<p></p>
 		<p class="sub">
 		</p>
+	</div>
+
+	<div class="dashlet">
+		<svg width="200" height="200">
+			<defs>
+				<mask id="bigmask">
+					<rect width="100%" height="100%" fill="white"/>
+					<circle cx="100" cy="100" r="50"/>
+				</mask>
+				<mask id="smallmask">
+					<mask id="progress">
+						<rect width="25" height="25" fill="white"/>
+					</mask>
+					<circle cx="100" cy="100" r="75" fill="white" />
+					<circle cx="100" cy="100" r="45"/>
+				</mask>
+			</defs>
+			<circle id="donot1" cx="100" cy="100" r="50" mask="url(#smallmask)"/>
+		</svg>
 	</div>
 
 	<script>

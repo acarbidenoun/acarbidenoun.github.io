@@ -64,6 +64,16 @@ body {
 	color:#fff;
 }
 
+h2.sub {
+	font-size:0.75em;
+}
+
+.sub {
+	font-size:0.75em;
+	line-height:1.75em;
+	color:#6d6d6c;
+}
+
 .result {
 	display:none;
 }
