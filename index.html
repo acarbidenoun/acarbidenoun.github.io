@@ -89,6 +89,10 @@
 			$('#' + $(this).val()).show();
 			$('.menu').addClass("collapse");
 		});
+		$('.expand').click(function(){
+			$('.menu').removeClass("collapse");
+			$('#' + $('#areas').val()).hide();
+		})
 	});
 	</script>
 

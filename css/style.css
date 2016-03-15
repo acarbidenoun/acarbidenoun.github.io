@@ -184,15 +184,15 @@ footer .dashlet:nth-child(2){
 	height:40px;
 	position:relative;
 	overflow:none;
-	background:#000; 
+	background:transparent; 
 	border-radius:60%;
-	transition-duration:300ms;
+	transition-duration:600ms;
 }
 
 .menu.collapse p.hero{
 	font-size:16px;
 	opacity:0;
-	transition-duration:10ms;
+	transition-duration:10ms!important;
 }
 
 .menu.collapse select {
@@ -204,10 +204,15 @@ footer .dashlet:nth-child(2){
 	width:40px;
 	height:40px;
 	border-radius:60%;
-	background:inherit;
+	background:#000000;
 	position:absolute;
 	top:0;
 	right:0;
+	cursor:pointer;
 	display:block;
 	z-index: 4;
+}
+
+.menu.collapse .expand:hover {
+	background:#FF6B40;
 }
