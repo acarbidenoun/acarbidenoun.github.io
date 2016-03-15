@@ -7,22 +7,7 @@
 	<title>acarbidenoun is still working on this</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script>
-	$(function() {
-		var availableTags = [
-			"tungkol sa akin",
-			"about",
-			"mga nagawa",
-			"works",
-			"portfolio",
-			"links",
-			"cv"
-		];
-		$("#keywords").autocomplete({source:
-			availableTags});
-	});
-	</script>
+  	
 </head>
 
 <body>
@@ -30,7 +15,12 @@
 		<div class="panel" id="main">
 			<div class="logo"></div>
 			<h1>Ano ang gusto mong makita?</h1>
-			<input id="keywords" type="search" name=s placeholder="tungkol sa akin, mga nagawa, cv"/>
+			<select name="links">
+				<option value="about">Tungkol sa akin</option>
+				<option value="portfolio">Mga nagawa</option>
+				<option value="resume">Buod</option>
+				<option value="atbp">Sa Ibang Lugar</option>
+			</select>
 		</div>
 
 	<div class="result widget">
