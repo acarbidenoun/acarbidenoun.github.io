@@ -74,6 +74,10 @@ h2.sub {
 	color:#6d6d6c;
 }
 
+p.sub {
+	max-width:450px;
+}
+
 .result {
 	display:none;
 }
