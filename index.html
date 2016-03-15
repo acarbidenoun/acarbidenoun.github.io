@@ -14,6 +14,7 @@
 	<div id="paper" class="container">
 		<div class="logo"></div>
 
+		<div class="menu"><div class="expand"></div>
 		<p class="hero">Hi! Now that you are here, how can I help you?</p>
 
 		
@@ -25,7 +26,8 @@
 				<option value="resume">Look through my resume</option>
 				<option value="links">Reach me in other ways</option></optgroup>
 			</select>
-		
+
+		</div>
 	<div class="check"></div>
 
 	<div id="about" class="result widget">
@@ -85,6 +87,7 @@
 		$('#areas').change(function(){
 			$('.result').hide();
 			$('#' + $(this).val()).show();
+			$('.menu').addClass("collapse");
 		});
 	});
 	</script>

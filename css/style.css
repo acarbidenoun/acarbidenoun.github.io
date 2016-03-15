@@ -47,8 +47,16 @@ acarbidenoun page
     font-style: normal;
 }
 
+* {
+	transition-property: all;
+	transition-duration:300ms;
+	transition-timing-function: cubic-bezier(.25,.1,.25,1);
+	/*: {"ease":".25,.1,.25,1","linear":"0,0,1,1","ease-in":".42,0,1,1","ease-out":"0,0,.58,1","ease-in-out":".42,0,.58,1"}*/	
+}
+
 .hero {
 	font-size: 33px;
+	line-height:1.36em;
 }
 
 html {
@@ -160,4 +168,46 @@ footer .dashlet {
 footer .dashlet:nth-child(2){
 	border-left:1px dotted #4c4c4c;
 	border-right:1px dotted #4c4c4c;
+}
+
+.menu {
+	opacity:1;
+	background:inherit;
+}
+
+.menu select {
+	opacity:1;
+}
+
+.menu.collapse {
+	width:40px;
+	height:40px;
+	position:relative;
+	overflow:none;
+	background:#000; 
+	border-radius:60%;
+	transition-duration:300ms;
+}
+
+.menu.collapse p.hero{
+	font-size:16px;
+	opacity:0;
+	transition-duration:10ms;
+}
+
+.menu.collapse select {
+	opacity:0;
+	transition-duration:10ms;
+}
+
+.menu.collapse .expand {
+	width:40px;
+	height:40px;
+	border-radius:60%;
+	background:inherit;
+	position:absolute;
+	top:0;
+	right:0;
+	display:block;
+	z-index: 4;
 }
