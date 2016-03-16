@@ -7,6 +7,7 @@
 	<title>acarbidenoun is still working on this</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="typed.min.js"></script>
   	
 </head>
 
@@ -23,6 +24,9 @@
 			$('.menu').removeClass("collapse");
 			$('#' + $('#areas').val()).hide();
 		});
+		$(".hero").typed({
+			strings:["Hello there!", "Now that you're here, how can I help you?"], typeSpeed:0
+		});
 	});
    
 	</script>
@@ -30,7 +34,7 @@
 		<div class="logo"></div>
 
 		<div class="menu"><div class="expand"></div>
-		<p class="hero">Hi! Now that you are here, how can I help you?</p>
+		<p class="hero"></p>
 
 		
 			<select name="areas" id="areas" autofocus>
@@ -56,6 +60,7 @@
 
 	<div id="portfolio" class="result widget">
 		<h2>Portfolio</h2>
+		<p>You can see more on my dribbble account.
 		<ul class="shots"></ul>
 	</div>
 

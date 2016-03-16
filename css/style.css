@@ -191,6 +191,7 @@ footer .dashlet:nth-child(2){
 }
 
 .menu p.hero {
+	height:37px;
 	opacity:1;
 	transition-property:opacity;
 	transition-duration:600ms!important;
@@ -231,7 +232,7 @@ footer .dashlet:nth-child(2){
 
 ul.shots {
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 100px 0;
     padding: 0;
 }
 
@@ -248,4 +249,8 @@ ul.shot li.shot--shot{
 li.shots--shot {
     float: left;
     display: block;
+}
+
+.typed-cursor {
+	display:none;
 }
