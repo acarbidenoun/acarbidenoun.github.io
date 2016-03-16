@@ -186,18 +186,30 @@ footer .dashlet:nth-child(2){
 	overflow:none;
 	background:transparent; 
 	border-radius:60%;
-	transition-duration:600ms;
+	transition-duration:1000ms;
+	transition-delay:2000ms;
+}
+
+.menu p.hero {
+	opacity:1;
+	transition-property:opacity;
+	transition-duration:600ms!important;
 }
 
 .menu.collapse p.hero{
 	font-size:16px;
+	color:#2c2c2c;
 	opacity:0;
-	transition-duration:10ms!important;
+	transition-property:opacity;
+	transition-duration:200ms;
+	transition-delay:0;
 }
 
 .menu.collapse select {
 	opacity:0;
-	transition-duration:10ms;
+	transition-property:opacity;
+	transition-duration:200ms;
+	transition-delay:0;
 }
 
 .menu.collapse .expand {
