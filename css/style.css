@@ -228,3 +228,24 @@ footer .dashlet:nth-child(2){
 .menu.collapse .expand:hover {
 	background:#FF6B40;
 }
+
+ul.shots {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.shots .shots--shot a img {
+    width: 300px;
+    margin-right:10px;
+}
+
+ul.shot li.shot--shot{
+    float: left;
+    display: block;
+}
+
+li.shots--shot {
+    float: left;
+    display: block;
+}

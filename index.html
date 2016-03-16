@@ -11,6 +11,21 @@
 </head>
 
 <body>
+
+	<script>
+	$(function(){
+		$('#areas').change(function(){
+			$('.result').hide();
+			$('#' + $(this).val()).show();
+			$('.menu').addClass("collapse");
+		});
+		$('.expand').click(function(){
+			$('.menu').removeClass("collapse");
+			$('#' + $('#areas').val()).hide();
+		});
+	});
+   
+	</script>
 	<div id="paper" class="container">
 		<div class="logo"></div>
 
@@ -41,7 +56,7 @@
 
 	<div id="portfolio" class="result widget">
 		<h2>Portfolio</h2>
-		<h2 class="sub">Porpolyo</h2>
+		<ul class="shots"></ul>
 	</div>
 
 	<!--<div class="dashlet">
@@ -78,21 +93,23 @@
 			Random Tweets</a>
 		</div>
 	</footer>
+ 	<script src="http://lab.tylergaw.com/jribbble/bower_components/jribbble/dist/jribbble.min.js"></script>
+ 	<script>
+    $.jribbble.setToken('1a6f15a16c957a348e6884a8094a51ab4f4ff9cff2d65a9813a4216b2ffe360d');
+    $.jribbble.users('arianebundoc').shots().then(function(shots) {
+    	var html = [];
 
-	<script>
-	$(function(){
-		$('#areas').change(function(){
-			$('.result').hide();
-			$('#' + $(this).val()).show();
-			$('.menu').addClass("collapse");
-		});
-		$('.expand').click(function(){
-			$('.menu').removeClass("collapse");
-			$('#' + $('#areas').val()).hide();
-		})
-	});
-	</script>
+      shots.forEach(function(shot) {
+        html.push('<li class="shots--shot">');
+        html.push('<a href="' + shot.html_url + '">');
+        html.push('<img src="' + shot.images.normal + '">');
+        html.push('</a></li>');
+      });
 
+      $('.shots').html(html.join(''));
+    });
+  </script>
+</body>
 </body>
 
 </html>
