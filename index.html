@@ -8,7 +8,6 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<link type="text/css" rel="stylesheet" href="css/bjqs.css" />
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="bjqs-1.3.min.js"></script>
 	<script src="typed.min.js"></script>
   	
 </head>
@@ -49,12 +48,12 @@
 			</select>-->
 
 			<div id="slider">
-				<ul id="ml" class="bjqs">
-					<li>Here're some ideas...</li>
-					<li>Know a little about me.</li>
-					<li>Take a look at my portfolio.</li>
-					<li>Browse through my resume.</li>
-					<li>Reach me in other ways.</li>
+				<ul id="ml">
+					<li class="slide">Here're some ideas...</li>
+					<li class="slide">Know a little about me.</li>
+					<li class="slide">Take a look at my portfolio.</li>
+					<li class="slide">Browse through my resume.</li>
+					<li class="slide">Reach me in other ways.</li>
 				</ul>
 			</div>
 
@@ -110,16 +109,7 @@
 			Random Tweets</a>
 		</div>
 	</footer>
-	<script>
-  jquery(document).ready(function($){
-  $('#slider').bjqs({
-  		'height': 45,
-  		'width': 450,
-		'responsive' : true,
-		'showcontrols':true
-	});
-  });
-  </script>
+
  	<script src="http://lab.tylergaw.com/jribbble/bower_components/jribbble/dist/jribbble.min.js"></script>
  	<script>
     $.jribbble.setToken('1a6f15a16c957a348e6884a8094a51ab4f4ff9cff2d65a9813a4216b2ffe360d');
