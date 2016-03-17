@@ -112,7 +112,7 @@ p.sub {
 	background:transparent;
 }
 
-select {
+select{
 	background:#2d2d2d;
 	color:#f3f3f3;
 	height:45px;
@@ -253,4 +253,61 @@ li.shots--shot {
 
 .typed-cursor {
 	display:none;
+}
+
+ul#ml {
+	width:450px;
+	list-style-type:none;
+	top:40px;
+	padding-left:0;
+	position:absolute;
+}
+
+ul#ml li {
+	color:#333;
+	padding:10px;
+}
+
+ul#ml li.sel{
+	color:#fff;
+}
+
+.viewsel {
+	width:450px;
+	position:absolute;
+	top:30px;
+	border:1px solid #4c4c4c;
+	height:45px;
+	border-radius: 4px;
+}
+
+#selectarea {
+	height:300px;
+}
+
+.selected {
+	background:transparent;
+}
+
+ul#ml {
+	font-size:21px;
+	position:absolute;
+	top:10px;
+}
+
+ul#ml span {
+	font-size:20px;
+	width:60px;
+	height:60px;
+	display:block!important;
+	float:left;
+	cursor: pointer;
+}
+
+span.up {
+	background:#0f0;
+}
+
+span.down {
+	background:#f00;
 }
