@@ -6,7 +6,7 @@
 
 	<title>acarbidenoun is still working on this</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
-	<link type="text/css" rel="stylesheet" href="css/bjqs.css" />
+	
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="typed.min.js"></script>
   	
@@ -16,6 +16,7 @@
 
 	<script>
 	$(function(){
+
 		$('#areas').change(function(){
 			$('.result').hide();
 			$('#' + $(this).val()).show();
@@ -46,9 +47,9 @@
 				<option value="resume">Look through my resume</option>
 				<option value="links">Reach me in other ways</option></optgroup>
 			</select>-->
-
-			<div id="slider">
-				<ul id="ml">
+			
+			<div id="slider"><a class="control_prev"><</a><a class="control_next">></a>
+				<ul>
 					<li class="slide">Here're some ideas...</li>
 					<li class="slide">Know a little about me.</li>
 					<li class="slide">Take a look at my portfolio.</li>
@@ -109,6 +110,60 @@
 			Random Tweets</a>
 		</div>
 	</footer>
+
+	<script>
+	jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').height;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlHeight = slideCount * slideHeight;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ height: sliderUlHeight, marginTop: - slideHeight });
+	
+    $('#slider ul li:first-child').prependTo('#slider ul');
+
+    function moveUp() {
+        $('#slider ul').animate({
+            top: + slideHeight
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('top', '');
+        });
+    };
+
+    function moveDown() {
+        $('#slider ul').animate({
+            top: - slideHeight
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('top', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveUp();
+    });
+
+    $('a.control_next').click(function () {
+        moveDown();
+    });
+
+    $('#slider ul li').click(function(){
+    	$(this).prependTo('#slider ul');
+    });
+
+});    
+
+</script>
 
  	<script src="http://lab.tylergaw.com/jribbble/bower_components/jribbble/dist/jribbble.min.js"></script>
  	<script>
