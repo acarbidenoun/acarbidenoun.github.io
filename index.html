@@ -48,20 +48,22 @@
 				<option value="links">Reach me in other ways</option></optgroup>
 			</select>-->
 			
-			<div id="slider"><a class="control_prev"><</a><a class="control_next">></a>
+			<div id="slider" class="fadeIn"><a class="control_prev"><</a><a class="control_next">></a>
+			<div class="viewsel"></div>
+			<div id="go">Go.</div>
 				<ul>
-					<li class="slide">Here're some ideas...</li>
-					<li class="slide">Know a little about me.</li>
-					<li class="slide">Take a look at my portfolio.</li>
-					<li class="slide">Browse through my resume.</li>
-					<li class="slide">Reach me in other ways.</li>
+					<li id="links" class="slide slideUp">Reach me in other ways.</li>
+					<li id="non" class="slide slideUp">Here're some ideas...</li>
+					<li id="about" class="slide slideUp">Know a little about me.</li>
+					<li id="works" class="slide slideUp">Take a look at my portfolio.</li>
+					<li id="cv" class="slide slideUp">Browse through my resume.</li>
 				</ul>
 			</div>
 
 		</div>
-	<div class="check"></div>
 
-	<div id="about" class="result widget">
+	<div id="aboutcontent" class="result widget">
+		<div class="closer">Close</div>
 		<h2>About Me</h2>
 		
 		<p>I'm Ariane Bundoc, a UI/UX Designer at Screen Interaction with offices in Stockholm and Dubai. I started as a Freelance Web Designer/Front-end Developer in 2010. Studied New Media Design in the Philippines.</p>
@@ -70,7 +72,7 @@
 		</p>
 	</div>
 
-	<div id="portfolio" class="result widget">
+	<div id="portfoliocontent" class="result widget">
 		<h2>Portfolio</h2>
 		<p>You can see more on my dribbble account.
 		<ul class="shots"></ul>
@@ -131,11 +133,18 @@
 	
     $('#slider ul li:first-child').prependTo('#slider ul');
 
+    $('#go').click(function(){
+    	var currentiD = $('#slider ul li:nth-child(2)').attr("id");
+    	$('#'+ currentiD +'content').show();
+    	$('.menu').addClass("collapse");
+    });
+
     function moveUp() {
         $('#slider ul').animate({
             top: + slideHeight
         }, 200, function () {
             $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul li:last-child').addClass('sel');
             $('#slider ul').css('top', '');
         });
     };
